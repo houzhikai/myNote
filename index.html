@@ -270,23 +270,27 @@
                   <div>技术难点：</div>
                   <ul>
                     <li>
-                        TypeScript 的兼容性问题：重复的标识符LibraryManagedAttributes, 这是因为 yarn 解析 @types/react 的版本冲突问题。<br/>
+                        TypeScript 的兼容性问题：<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;重复的标识符LibraryManagedAttributes, 这是因为 yarn 解析 @types/react 的版本冲突问题。<br/>
                         "skipLibCheck": true: 忽略所有声明文件的类型检查
                     </li>
                     <br/>
                     <li>
-                        在页面中展示高亮代码：可以使用 require 引用 url, 直接展示指定的页面内容。<br/>
+                        在页面中展示高亮代码：<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;可以使用 require 引用 url, 直接展示指定的页面内容。<br/>
                         如下面一个例子<br/>
                         const x= require(`!!raw-loader!${props.path}`<br/>
                         此时又有一个问题, require 不能动态地展示地址, 即现在只能在每个需要的地方手动添加需要的地址。
                     </li>
+                    <br/>
                     <li>
                         引入 png 图片: 安装关于图片的 loader, 但是在项目中 引用图片还是有报错，暂时使用 @ts-ignore 来忽略单行问题。
                     </li>
-                    <li>组件的样式问题: 在 dialog 组件中使用内联样式会出现一部分没有遮拦的情况, 需要也将这部分包裹住, 此时出现两个同级的 div , 用 Fragment 标签将内容包裹起来。<br/>
-                      Fragment 作用: 允许将子列表分组，无需向 DOM 添加额外节点。
-                      然后使用传送门 Portal, 动态生成组件，最后闭包传 API。<br/>
-                      Portal 用法: 当从组件的 render 方法返回一个元素时，该元素将被挂载到 DOM 节点中离其最近的父节点。
+                    <li>组件的样式问题: <br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;在 dialog 组件中使用内联样式会出现一部分没有遮拦的情况, 需要也将这部分包裹住, 此时出现两个同级的 div , 用 Fragment 标签将内容包裹起来。<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;Fragment 作用: 允许将子列表分组，无需向 DOM 添加额外节点。<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;然后使用传送门 Portal, 动态生成组件，最后闭包传 API。<br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp;Portal 用法: 当从组件的 render 方法返回一个元素时，该元素将被挂载到 DOM 节点中离其最近的父节点。
                     </li>
                   </ul>
                   <br/>
