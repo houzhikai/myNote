@@ -7,12 +7,13 @@ html{
 }
 * a{
    text-decoration: none;
-   color: blue;
+   color: #4a8afa;
 }
 body{
     margin: 0;
+    background: #161818;
     font: 14px/1.5 Arial;
-    color: #333;
+    color:#e3ddd4;
     display: grid;
     grid: auto auto / 1fr 900px 1fr;
 }
@@ -153,7 +154,7 @@ main section > .detail {
     height: 4px;
     border-radius: 6px;
     margin: 8px 0 16px 0;
-    background-color: #ccc;
+    background-color: #393c3d;
 }
 .map .detail .bar {
     display: block;

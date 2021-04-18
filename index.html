@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./index.css" />
     <link
       rel="stylesheet"
-      href="//at.alicdn.com/t/font_2225312_8u8u8kzsiy.css"
+      href="//at.alicdn.com/t/font_2225312_3uewdrq8zx6.css"
     />
   </head>
   <body>
@@ -28,8 +28,7 @@
               <span class="iconfont icon-email"></span>hou17513213314@163.com
             </li>
             <li>
-              <span class="iconfont icon-education"></span>本科 郑州科技学院
-              计算机系
+              <span class="iconfont icon-education"></span>本科 郑州科技学院 计算机系
             </li>
           </ul>
         </section>
@@ -43,29 +42,19 @@
               >弹性布局，能根据设计图像素级完成页面制作
             </li>
             <li>
-              熟悉<span class="high-light">HTML5及语义化</span>，掌握<span
-                class="high-light"
-                >CSS3</span
-              >动画、过渡、渐变效果等常用技术。
+              熟悉<span class="high-light">HTML5及语义化</span>，掌握<span class="high-light">CSS3</span>动画、过渡、渐变效果等常用技术。
             </li>
             <li>
-              掌握<span class="high-light">JavaScript</span>,了解<span
-                class="high-light"
-                >TypeScript</span
-              >, 掌握<span class="high-light">ES6</span>以上的常用语法。
+              掌握<span class="high-light">JavaScript</span>,了解<span class="high-light">TypeScript</span>, 掌握<span class="high-light">ES6</span>以上的常用语法。
             </li>
             <li>
               熟悉使用<span class="high-light">React</span>开发项目，了解其原理
             </li>
             <li>
-              熟练使用<span class="high-light"
-                >VsCode、WebStorm、Git、GitHub</span
-              >等工具。
+              熟练使用<span class="high-light">VsCode、WebStorm、Git、GitHub</span等工具。
             </li>
             <li>
-              熟悉前端工程化，熟悉<span class="high-light">
-                Webpack / babel / Mobx</span
-              >。
+              熟悉前端工程化，熟悉<span class="high-light">Webpack / babel / Mobx</span>。
             </li>
             <li>了解小程序开发。</li>
           </ul>
@@ -75,6 +64,8 @@
           <span class="iconfont icon-tupu"></span>
           <h2>技能图谱</h2>
           <dl class="detail">
+            <dt>HTML</dt>
+            <dd><span class="bar" style="width: 80%"></span></dd>
             <dt>CSS</dt>
             <dd><span class="bar" style="width: 80%"></span></dd>
             <dt>JavaScript</dt>
@@ -103,6 +94,20 @@
           </ul>
         </section>
         <section>
+          <span class="iconfont icon-yingyong"></span>
+          <h2>原生 js 的小应用</h2>
+          <ul class="detail">
+            <li><a target="_blank" href="https://houzhikai.github.io/play/heart/heart.html">跳动的心</a></li>
+                  <li><a target="_blank" href="https://houzhikai.github.io/play/Music/index.html">音乐播放器</a></li>
+                  <li><a target="_blank" href="https://houzhikai.github.io/play/bigger/bigger.html">音乐播放器</a></li>
+                  <li><a target="_blank" href="https://houzhikai.github.io/play/collapse.html">手风琴效果</a></li>
+                  <li><a target="_blank" href="https://houzhikai.github.io/Message/message.html">消息提醒</a></li>
+                  <li><a target="_blank" href="https://houzhikai.github.io/operating/">tab选项卡</a></li>
+                  <li><a target="_blank" href="https://houzhikai.github.io/Dialog/">弹窗</a></li>  
+                  <li><a target="_blank" href="https://houzhikai.github.io/Carousel/">走马灯</a></li>
+          </ul>
+        </section>
+        <section>
           <span class="iconfont icon-jieshao"></span>
           <h2>个人介绍</h2>
           <ul class="detail">
@@ -120,15 +125,19 @@
             <li>
               <h3>速传图 图床</h3>
               <ul class="content">
-                <li>该项目使用<span class="high-light">React + Mobx</span>技术，用<span class="high-light">leancloud</span>作为数据后台，实现了多用户在线上传图片的功能。</li>
+                <li>该项目使用<span class="high-light">React + Mobx</span>技术，用<span class="high-light">LeanCloud</span>作为数据后台，实现了多用户在线上传图片的功能。</li>
                 <li>该项目核心功能包括用户的<span class="high-light">注册、登录、图片的上传、定制、上传历史展示，删除图片</span>信息功能。</li>
-                <li>用到的技术：<span class="high-light">react-create-app、styled-components、React-Router、Mobx、leancloud、Ant-design</span></li>
+                <li>用到的技术：<span class="high-light">react-create-app、styled-components、React-Router、Mobx、LeanCloud、Ant-design</span></li>
                 <br />
                 <div>技术难点：</div>
                 <ul>
-                  <li>密码的校验，通过查资料和询问前辈，最终利用三种方法进行校验，并且都将方法使用在项目中。</li>
-                  <li>多用户登录内容共享： 在查看leancloud文档中，发现 可以使用 query.equalTo() 命令，实现只能查看当前用户的信息。</li>
-                  <li>数据不能实时更新： 需要加上constructor 函数，因为在 mobx >=6的版本中，必须加上可观察者状态</li>
+                  <li>密码的校验的三种方法：<br/>
+                    1.初步的校验 required: true 当没有写密码或格式不正确时会有文字提示;<br/>
+                    2.定义一个函数 validator, 再定义它的规则, 对输入的值做一个更精确的判断;<br/>
+                    3.与其他的功能协同判断, 可以直接返回一个对象, 而且此校验更加精准。
+                  </li>
+                  <li>多用户登录内容共享: 可以使用 query.equalTo() 命令，将其参数变为 owner 即仅能查看当前用户的信息。</li>
+                  <li>数据不能实时更新: 在 mobx >=6的版本中必须加上 constructor 函数，这是一种可观察者状态, 可以保证数据的及时更新。</li>
                 </ul>
                 <br/>
               </ul>
@@ -144,25 +153,29 @@
               <h3>随身记 diary(移动端)</h3>
               <ul class="content">
                 <li>
-                  该项目使用<span class="high-light">React、TypeScript、hook、echarts</span>技术，实现了在线记账的功能。
+                  该项目使用<span class="high-light">React、TypeScript、hook、ECharts</span>技术，实现了在线记账的功能。
                 </li>
                 <li>
                   它的核心功能包含：<span class="high-light">数据的添加、删除、修改、查看和保存功能。</span>
                 </li>
                 <li>
-                  用到的技术:<span class="high-light">react-create-app、styled-components、React-Router、Day.js、ES6、Echart、hooks</span>
+                  用到的技术:<span class="high-light">react-create-app、styled-components、React-Router、Day.js、ES6、ECharts、hooks</span>
                 </li>
                 <br />
                 <div>技术难点：</div>
                 <ul>
                   <li>
-                    使用 dart-asaa 代替 node-sass：node-sass 有两个缺点，1.下载速度慢 2. 编译速度慢 但是React 仅支持 node-sass，从网上查找资料，最终达到目的。
+                    安装 sass: 首先 React 仅支持 node-sass;<br/>
+                    但是直接安装 node-sass 有两个缺点: 1.下载速度慢 2. 编译速度慢<br/>
+                    所以在该项目中使用命令行使 dart-sass 代替 node-sass, 如果直接用 dart-sass 会出现编译不通过的问题。
                   </li>
                   <li>
-                    几个组件共用一个数据类型的部分类型：使用 partial 取得部分类型
+                    只拿部分的数据类型：该记账页面中, 有几个组件共用一个类型, 而且每一个组件的类型都不尽相同, 使用 partial 只拿类型的部分值, 可以实现该功能。
                   </li>
                   <li>
-                    去除 svg 自带的颜色来随心所欲地改变颜色：从网上查找去除 SVG方法，添加 svgo-loader ，plugin：removeAttrs：{attrs："fill"}，这样就可以在代码中添加 fill 来改变想要的 SVG 颜色。
+                    去除/更改 svg 默认的颜色：<br/>
+                    1. 首先可以更改 SVG 的文件内容, 进而来修改图片的颜色;<br/>
+                    2. 添加 svgo-loader 和 plugin：removeAttrs：{attrs："fill"}, 这样就可以在代码中添加 fill 来改变想要的 SVG 颜色。
                   </li>
                 </ul>
                 <br/>
@@ -179,28 +192,28 @@
                 <h3>在线PPT制作平台</h3>
                 <ul class="content">
                   <li>
-                      该项目使用<span class="high-light">原生 js </span>实现了一款<span class="high-light">简洁的在线 PPT </span>制作平台，用户可以直接用 markdown 语法来展示 PPT。
+                      该项目使用<span class="high-light">原生 JavaScript </span>实现了一款<span class="high-light">简洁的在线 PPT </span>制作平台，用户可以直接用 markdown 语法来展示 PPT。
                   </li>
                   <li>
                       它的核心功能包含：<span class="high-light">内容编辑、上传图片、主题切换、切换页面特效、下载 PPT、演讲者模式</span>。
                   </li>
                   <li>
-                      用到的技术：<span class="high-light">原生 JavaScript、 css、 html、 revealjs框架</span>
+                      用到的技术：<span class="high-light">JavaScript、 css、 html、 revealJS框架</span>。
                   </li>
                   <br />
                   <div>技术难点：</div>
                   <ul>
                     <li>
-                      用正则表达式将文本拆分成 以#开头的字符串： 用 （换行 + #） 作为拆分点将文本分为几个字符串
+                      定义分页标准: 用正则表达式将文本拆分成几个以#开头的字符串: 用(换行 + #)作为拆分点将文本分为几个字符串, 即页面的展示内容
                     </li>
                     <li>
-                      原生 js 的 tab 切换。
+                      原生 JavaScript 的 tab 切换: CSS 和 JavaScript 的配合, 找到导航的下标位置设置其 active 属性来判断是否被选中。
                     </li>
                     <li>
-                      上传图片显示进度条
+                      上传图片显示进度条: 目的是能够直接在编辑文件的时候清除图片的上传进度和是否上传成功。
                     </li>
                     <li>
-                      主题特效的 切换                 
+                      主题特效的切换: 通过切换 Link 改变主题样式, 再使用 localStorage.reload() 页面更新从而进行样式的更换。
                    </li>
                   </ul>
                   <br/>
@@ -226,12 +239,13 @@
                   <div>技术难点：</div>
                   <ul>
                     <li>
-                        wx.getBackgroundAudioManager() 接口问题： 项目中只需音乐的 播放/暂停 功能，但是会出错，只加上paly 属性会导致不能播放/暂停切换，且控制台不报错，将该接口的其他属性都加上，错误消除。
+                      wx.getBackgroundAudioManager() 接口问题: 项目中只需音乐的 播放/暂停 功能, 但是只有 paly 属性该功能不能实现, 且控制台不报错, 必须加上该接口的其他属性错误才能消除。
                     </li>
                     <li>
-                        hidden 属性：在某个组件上需要加上 hidden，但是 hidden 会默认取消 detached 方法。只有将 hidden 换成 wx:if （hidden->wx:if ==== 》 !=200-> =200）
+                        hidden 属性: 隐藏组件, 占用空间。<br/>
+                        开始在组件上使用 hidden, 但是 hidden 又会默认取消 detached(离开页面节点) 方法。又将 wx:if 替换 hidden 使用 detached 生命周期函数。  （hidden->wx:if ====> !=200-> =200）
                     </li>
-                    <li>滚轮滑到下方不能加载更多数据：默认的 onReachBottom 函数把自己写的覆盖，导致页面不能加载更多。</li>
+                    <li>播放器的控制: 页面的 播放/暂停 和 下方播放器不能同步, 添加了自定义组件 _recoverStatus() 之后实现了两个组件可以同步操作。 </li>
                   </ul>
                   <br/>
                 </ul>
@@ -244,10 +258,10 @@
               <hr/>
 
               <li>
-                <h3>react 框架造轮子</h3>
+                <h3>React 框架造轮子</h3>
                 <ul class="content">
                   <li>
-                    该项目使用<span class="high-light"> react 、Webpack</span>和 <span class="high-light">TypeScript </span>搭建的一个造轮子项目。
+                    该项目使用<span class="high-light"> React 、Webpack</span>和 <span class="high-light">TypeScript </span>搭建的一个造轮子项目。
                   </li>
                   <li>
                     使用的技术栈：<span class="high-light">React、TypeScript、Webpack</span>。
@@ -256,15 +270,24 @@
                   <div>技术难点：</div>
                   <ul>
                     <li>
-                        TypeScript 的兼容性问题： "skipLibCheck": true
+                        TypeScript 的兼容性问题：重复的标识符LibraryManagedAttributes, 这是因为 yarn 解析 @types/react 的版本冲突问题。<br/>
+                        "skipLibCheck": true: 忽略所有声明文件的类型检查
+                    </li>
+                    <br/>
+                    <li>
+                        在页面中展示高亮代码：可以使用 require 引用 url, 直接展示指定的页面内容。<br/>
+                        如下面一个例子<br/>
+                        const x= require(`!!raw-loader!${props.path}`<br/>
+                        此时又有一个问题, require 不能动态地展示地址, 即现在只能在每个需要的地方手动添加需要的地址。
                     </li>
                     <li>
-                        在页面中展示代码：可以使用 require 引用 url，但是又有一个问题，require 不能展示动态地址。所以现在的解决方案是在每个需要的地方 手动添加 url =》const x= require(`!!raw-loader!${props.path}`)
+                        引入 png 图片: 安装关于图片的 loader, 但是在项目中 引用图片还是有报错，暂时使用 @ts-ignore 来忽略单行问题。
                     </li>
-                    <li>
-                        引入 png 图片： 还需要安装关于图片的 loader，但是在项目中还是有些问题，可以使用 @ts-ignore 来忽略问题。
+                    <li>组件的样式问题: 在 dialog 组件中使用内联样式会出现一部分没有遮拦的情况, 需要也将这部分包裹住, 此时出现两个同级的 div , 用 Fragment 标签将内容包裹起来。<br/>
+                      Fragment 作用: 允许将子列表分组，无需向 DOM 添加额外节点。
+                      然后使用传送门 Portal, 动态生成组件，最后闭包传 API。<br/>
+                      Portal 用法: 当从组件的 render 方法返回一个元素时，该元素将被挂载到 DOM 节点中离其最近的父节点。
                     </li>
-                    <li>当在 div 中出现内联样式，会出现一部分不被遮拦的情况：用 Fragment 标签将内容包括起来，Fragment 标签不会在网页代码中现实。使用传送门 portal，动态生成组件，最后闭包传 API。</li>
                   </ul>
                   <br/>
                 </ul>
@@ -274,27 +297,13 @@
                   <a target="_blank" href="https://houzhikai.github.io/React-UI-preview/example.html#/">在线预览</a>
                 </span>
               </li>
-              <hr/>
-
-              <li>
-                <h3>几个原生 JavaScript 的小应用</h3>
-               
-                <ul class="content">
-                  <li><a target="_blank" href="https://houzhikai.github.io/play/heart/heart.html">跳动的心</a></li>
-                  <li><a target="_blank" href="https://houzhikai.github.io/play/Music/index.html">音乐播放器</a></li>
-                  <li><a target="_blank" href="https://houzhikai.github.io/play/bigger/bigger.html">音乐播放器</a></li>
-                  <li><a target="_blank" href="https://houzhikai.github.io/play/collapse.html">手风琴效果</a></li>
-                  <li><a target="_blank" href="https://houzhikai.github.io/Message/message.html">消息提醒</a></li>
-                  <li><a target="_blank" href="https://houzhikai.github.io/operating/">tab选项卡</a></li>
-                  <li><a target="_blank" href="https://houzhikai.github.io/Dialog/">弹窗</a></li>  
-                  <li><a target="_blank" href="https://houzhikai.github.io/Carousel/">走马灯</a></li>
-                </ul>
-               
-              </li>
-              <br>
-              <br>
-              <br>
-              <br>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              
             
           </ul>
         </section>
