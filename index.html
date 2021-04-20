@@ -168,17 +168,15 @@
                 <div>技术难点：</div>
                 <ul>
                   <li>
-                    安装 sass: 首先 React 仅支持 node-sass;<br/>
-                    但是直接安装 node-sass 有两个缺点: 1.下载速度慢 2. 编译速度慢<br/>
-                    所以在该项目中使用命令行使 dart-sass 代替 node-sass, 如果直接用 dart-sass 会出现编译不通过的问题。
+                    安装 sass: 在该项目中使用命令行使 dart-sass 代替 node-sass, 直接用 dart-sass 会出现编译不通过的问题。
                   </li>
                   <li>
                     只拿部分的数据类型：该记账页面中, 有几个组件共用一个类型, 而且每一个组件的类型都不尽相同, 使用 partial 只拿类型的部分值, 可以实现该功能。
                   </li>
                   <li>
-                    去除/更改 svg 默认的颜色：<br/>
-                    1. 首先可以更改 SVG 的文件内容, 进而来修改图片的颜色;<br/>
-                    2. 添加 svgo-loader 和 plugin：removeAttrs：{attrs："fill"}, 这样就可以在代码中添加 fill 来改变想要的 SVG 颜色。
+                    去除/更改 svg 默认的颜色：两种方法<br/>
+                    1. 可以更改 SVG 的文件内容, 进而来修改图片的颜色;<br/>
+                    2. 添加 loader 和 plugin 可以在代码中添加 fill 来改变想要的 SVG 颜色。
                   </li>
                 </ul>
                 <br/>
@@ -207,7 +205,7 @@
                   <div>技术难点：</div>
                   <ul>
                     <li>
-                      定义分页标准: 用正则表达式将文本拆分成几个以#开头的字符串: 用(换行 + #)作为拆分点将文本分为几个字符串, 即页面的展示内容
+                      定义分页标准: 用正则表达式将文本拆分成几个以#开头的字符串: 用(换行 + #)作为拆分点将文本分为几个字符串, 即页面的展示内容。
                     </li>
                     <li>
                       原生 JavaScript 的 tab 切换: CSS 和 JavaScript 的配合, 找到导航的下标位置设置其 active 属性来判断是否被选中。
@@ -246,9 +244,9 @@
                     </li>
                     <li>
                         hidden 属性: 隐藏组件, 占用空间。<br/>
-                        开始在组件上使用 hidden, 但是 hidden 又会默认取消 detached(离开页面节点) 方法。又将 wx:if 替换 hidden 使用 detached 生命周期函数。  （hidden->wx:if ====> !=200-> =200）
+                        开始在组件上使用 hidden, 但是 hidden 又会默认取消 detached(离开页面节点) 方法。又将 wx:if 替换 hidden 使用 detached 生命周期函数。 
                     </li>
-                    <li>播放器的控制: 页面的 播放/暂停 和 下方播放器不能同步, 添加了自定义组件 _recoverStatus() 之后实现了两个组件可以同步操作。 </li>
+                    <li>播放器的控制: 页面的 播放/暂停 和 下方播放器不能同步, 添加了自定义组件后实现了两个组件可以同步操作。 </li>
                   </ul>
                   <br/>
                 </ul>
@@ -264,7 +262,7 @@
                 <h3>React 框架造轮子</h3>
                 <ul class="content">
                   <li>
-                    该项目使用<span class="high-light"> React 、Webpack</span>和 <span class="high-light">TypeScript </span>搭建的一个造轮子项目。
+                    该项目使用<span class="high-light"> React 、Webpack</span>和 <span class="high-light">TypeScript </span>搭建的一个造轮子项目。目前有 icon、dialog、Layout 三个组件。每个组件均经历从需求分析、调试、单元测试。完成该项目使我对 React 的常用特征更加熟悉，同时提升了自己对前端工程化流程的深刻理解，近一步了解开源文化。
                   </li>
                   <li>
                     使用的技术栈：<span class="high-light">React、TypeScript、Webpack</span>。
@@ -286,9 +284,7 @@
                         此时又有一个问题, require 不能动态地展示地址, 即现在只能在每个需要的地方手动添加需要的地址。
                     </li>
                     <br/>
-                    <li>
-                        引入 png 图片: 安装关于图片的 loader, 但是在项目中 引用图片还是有报错，暂时使用 @ts-ignore 来忽略单行问题。
-                    </li>
+                   
                     <li>组件的样式问题: <br/>
                       &nbsp;&nbsp;&nbsp;&nbsp;在 dialog 组件中使用内联样式会出现一部分没有遮拦的情况, 需要也将这部分包裹住, 此时出现两个同级的 div , 用 Fragment 标签将内容包裹起来。<br/>
                       &nbsp;&nbsp;&nbsp;&nbsp;Fragment 作用: 允许将子列表分组，无需向 DOM 添加额外节点。<br/>
